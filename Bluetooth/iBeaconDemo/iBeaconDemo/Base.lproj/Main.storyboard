@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Gx-bf-tVl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--iBeacon定位技术-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD6-3l-NsP">
+                                <rect key="frame" x="20" y="114" width="560" height="60"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Php-lD-r2K"/>
+                                </constraints>
+                                <state key="normal" title="iOS作为iBeacon服务端">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iBeaconServerAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nDI-TE-2WT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUJ-Kx-vqG">
+                                <rect key="frame" x="20" y="201" width="560" height="60"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5JM-e0-LaZ"/>
+                                </constraints>
+                                <state key="normal" title="iOS作为iBeacon客户端">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iBeaconClientAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hAJ-46-nNG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VUJ-Kx-vqG" firstAttribute="leading" secondItem="mD6-3l-NsP" secondAttribute="leading" id="akM-OK-3aH"/>
+                            <constraint firstItem="mD6-3l-NsP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="cZT-qn-Wku"/>
+                            <constraint firstItem="VUJ-Kx-vqG" firstAttribute="top" secondItem="mD6-3l-NsP" secondAttribute="bottom" constant="27" id="ggb-8C-URX"/>
+                            <constraint firstItem="VUJ-Kx-vqG" firstAttribute="trailing" secondItem="mD6-3l-NsP" secondAttribute="trailing" id="kIH-xT-nSB"/>
+                            <constraint firstAttribute="trailing" secondItem="mD6-3l-NsP" secondAttribute="trailing" constant="20" id="y4j-vn-U6V"/>
+                            <constraint firstItem="mD6-3l-NsP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="zEp-id-DWz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iBeacon定位技术" id="i2N-q4-izJ"/>
+                    <connections>
+                        <outlet property="iBeaconClientButton" destination="VUJ-Kx-vqG" id="n49-rO-BFM"/>
+                        <outlet property="iBeaconServerButton" destination="mD6-3l-NsP" id="6O3-Z7-bVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Cl-TI-Tcw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Gx-bf-tVl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pAv-uK-5Ch">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="m5h-lB-Igq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSx-21-PMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="-354"/>
+        </scene>
+    </scenes>
+</document>

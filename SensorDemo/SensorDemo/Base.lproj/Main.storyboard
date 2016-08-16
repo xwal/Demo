@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-zg-LxX">
+                                <rect key="frame" x="262.5" y="120" width="75" height="30"/>
+                                <state key="normal" title="距离传感器"/>
+                                <connections>
+                                    <action selector="setupProximitySensor" destination="vXZ-lx-hvc" eventType="touchUpInside" id="md0-Wr-GSS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28T-Z8-o1W">
+                                <rect key="frame" x="255" y="180" width="90" height="30"/>
+                                <state key="normal" title="磁力计传感器"/>
+                                <connections>
+                                    <action selector="setupMagnetometerSensor" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GLg-4G-DTu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-3e-5Dq">
+                                <rect key="frame" x="255" y="240" width="90" height="30"/>
+                                <state key="normal" title="环境光传感器"/>
+                                <connections>
+                                    <action selector="setupAmbientLightSensor" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OuL-rg-Wn4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLE-88-6Hc">
+                                <rect key="frame" x="277.5" y="300" width="45" height="30"/>
+                                <state key="normal" title="加速计"/>
+                                <connections>
+                                    <action selector="pushAccelerometer" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jO2-qK-8f7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gO-hn-ysB">
+                                <rect key="frame" x="277.5" y="420" width="45" height="30"/>
+                                <state key="normal" title="计步器"/>
+                                <connections>
+                                    <action selector="stepCount" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IlF-z0-5On"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzb-kc-HO2">
+                                <rect key="frame" x="277.5" y="360" width="45" height="30"/>
+                                <state key="normal" title="陀螺仪"/>
+                                <connections>
+                                    <action selector="pushGyroscope" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Udy-UY-Os4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pLE-88-6Hc" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="0yM-yl-ovd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8gO-hn-ysB" secondAttribute="bottom" constant="50" id="1Sr-BV-jMz"/>
+                            <constraint firstItem="uzb-kc-HO2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1za-fH-cRk"/>
+                            <constraint firstItem="5b3-zg-LxX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="3AS-6k-GeA"/>
+                            <constraint firstItem="oyd-3e-5Dq" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5uE-vP-WFR"/>
+                            <constraint firstItem="8gO-hn-ysB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="B39-kA-hfy"/>
+                            <constraint firstItem="8gO-hn-ysB" firstAttribute="top" secondItem="uzb-kc-HO2" secondAttribute="bottom" constant="30" id="DKV-bV-U3A"/>
+                            <constraint firstItem="oyd-3e-5Dq" firstAttribute="top" secondItem="28T-Z8-o1W" secondAttribute="bottom" constant="30" id="Dl0-pv-Uv1"/>
+                            <constraint firstItem="5b3-zg-LxX" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="b0r-na-Jft"/>
+                            <constraint firstItem="28T-Z8-o1W" firstAttribute="top" secondItem="5b3-zg-LxX" secondAttribute="bottom" constant="30" id="cFk-Pr-C4b"/>
+                            <constraint firstItem="28T-Z8-o1W" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="i1M-T6-XmI"/>
+                            <constraint firstItem="pLE-88-6Hc" firstAttribute="top" secondItem="oyd-3e-5Dq" secondAttribute="bottom" constant="30" id="qx6-CH-YSl"/>
+                            <constraint firstItem="uzb-kc-HO2" firstAttribute="top" secondItem="pLE-88-6Hc" secondAttribute="bottom" constant="30" id="wRi-WK-fts"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Sr-BV-jMz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
